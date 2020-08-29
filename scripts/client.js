@@ -1,6 +1,8 @@
 
 $(document).ready(onReady)
 
+let montlyCost = []
+
 function onReady(){
     $( '#submitButton' ).on( 'click' , submitBtn )
 }
@@ -13,5 +15,6 @@ function onReady(){
             title: $( '#titleHolder').val(),
             salary: $( '#annualSalary').val()
         }
-        console.log('submitBtn', newEmployee, )
+        montlyCost.push(newEmployee);
+        console.log(newEmployee)
     }
