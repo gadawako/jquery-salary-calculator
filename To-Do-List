@@ -1,7 +1,7 @@
 Salary Calculator w/JS/JQ/HTML
 
-[  ] Source in JQ
-[  ] Interface for input  to collect '_employee first name, last name, ID number, job title, annual salary_'
+[ x ] Source in JQ
+[ x ] Interface for input  to collect '_employee first name, last name, ID number, job title, annual salary_'
 [  ] Submit button collecting the info
 [  ] store that info to calculate monthly cost array
 [  ] apend information to DOM and clear input fields
