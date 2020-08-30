@@ -16,6 +16,14 @@ function submitBtn() {
   };
   monthlyCost.push(newEmployee);
   displaySalary();
+  clearInputs();
+}
+function clearInputs(){
+    $("#firstName").val(''),
+    $("#lastName").val(''),
+    $("#idHolder").val(''),
+    $("#titleHolder").val(''),
+    $("#annualSalary").val('')
 }
 function displaySalary() {
   console.log("in displaySalary");
