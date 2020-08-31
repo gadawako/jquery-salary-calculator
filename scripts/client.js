@@ -18,13 +18,7 @@ function submitBtn() {
   displaySalary();
   clearInputs();
 }
-function clearInputs(){
-    $("#firstName").val(''),
-    $("#lastName").val(''),
-    $("#idHolder").val(''),
-    $("#titleHolder").val(''),
-    $("#annualSalary").val('')
-}
+
 function displaySalary() {
   console.log("in displaySalary");
   let el = $("#showSalary");
@@ -35,4 +29,9 @@ function displaySalary() {
              ${monthlyCost[i].last} ${monthlyCost[i].id} 
              ${monthlyCost[i].title}  ${monthlyCost[i].salary}</li>`);
   }
+  $("#firstName").val("");
+  $("#lastName").val("");
+  $("#idHolder").val("");
+  $("#titleHolder").val("");
+  $("#annualSalary").val("");
 }
