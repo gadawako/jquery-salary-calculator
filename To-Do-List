@@ -5,5 +5,5 @@ Salary Calculator w/JS/JQ/HTML
 [ x ] Submit button collecting the info
 [ x ] store that info to calculate monthly cost array
 [ x ] apend information to DOM and clear input fields
-[  ] if exceeded 20K, red backgorund
-[  ] Delete button that removes employee from DOM
+[ x ] if exceeded 20K, red backgorund
+[ x ] Delete button that removes employee from DOM

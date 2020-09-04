@@ -21,13 +21,10 @@ function onDelete() {
     }
   }
   employees.splice(indexOfEmployeeToRemove, 1);
-
-  updateTotalMonthlyCosts();
 }
 
 function submitBtn() {
   let item = $("#idHolder").val();
-  console.log(item);
   let newEmployee = {
     firstName: $("#firstName").val(),
     lastName: $("#lastName").val(),
@@ -36,7 +33,6 @@ function submitBtn() {
     salary: Number($("#annualSalary").val()),
   };
   employees.push(newEmployee);
-  console.log(employees);
   $("#employeeTable").empty();
 
   for (let i = 0; i < employees.length; i++) {
@@ -49,7 +45,7 @@ function submitBtn() {
         <td>${employee.id}</td>
         <td>${employee.title}</td>
         <td>$${employee.salary} per year</td>
-        <td><button>Delete</button></td>
+        <td><button class="deleteBtn">Delete</button></td>
       </tr>
     `);
   }
@@ -76,9 +72,8 @@ function submitBtn() {
 function updateTotalMonthlyCosts() {
   let totalMonthlyCosts = 0;
   for (let employee of employees) {
-    totalMonthlyCosts += employees.salary;
+    totalMonthlyCosts += employee.salary / 12;
   }
-
   $("#monthlyCosts").text(totalMonthlyCosts);
 
   if (totalMonthlyCosts > 20000) {
